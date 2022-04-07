@@ -1,0 +1,59 @@
+{
+  "name": "themename",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "develop": "webpack --config webpack.dev.js --watch --progress",
+    "eslint": "eslint --ext .js --ext .jsx .",
+    "test": "jest --passWithNoTests"
+  },
+  "prettier": "prettier-config-pronovix",
+  "eslintConfig": {
+    "extends": [
+      "pronovix"
+    ],
+    "ignorePatterns": [
+      "**/node_modules/**",
+      "build/",
+      "dist/",
+      "/webpack*"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-pronovix"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {}
+    }
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "build",
+      "dist"
+    ]
+  },
+  "dependencies": {
+    "@braintree/sanitize-url": "^6.0",
+    "highlight.js": "^11.2.0",
+    "immutable": "^4.0.0",
+    "js-file-download": "^0.4.12",
+    "openapi-snippet": "^0.12.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-dom": "^17.0.2",
+    "react-immutable-proptypes": "^2.2.0",
+    "react-lowlight": "^2.0.0",
+    "regenerator-runtime": "^0.13.9",
+    "sanitize-html": "^2.5.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "pronovix-drupal-dev": "^1.0.5"
+  }
+}

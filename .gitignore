@@ -25,3 +25,6 @@
 /.env
 /.editorconfig
 /.gitattributes
+
+# Ignore node_modules
+node_modules
